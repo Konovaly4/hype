@@ -1,7 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackMd5Hash = require('webpack-md5-hash');
 
 module.exports = {
   entry: { main: './src/index.js' },
@@ -20,9 +19,9 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
+          "postcss-loader",
           "css-loader",
           "sass-loader",
-          "postcss-loader",
         ],
       },
     ],
@@ -36,6 +35,5 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html'
     }),
-    new WebpackMd5Hash()
   ]
 }
