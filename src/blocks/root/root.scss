@@ -1,0 +1,11 @@
+@use '../constants/colors';
+
+.root {
+  color: colors.$white;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

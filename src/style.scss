@@ -1,9 +1,3 @@
-$color: #100;
-
-.main {
-  color: $color;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
+@use './blocks/root/root.scss';
+@use './blocks/header/header.scss';
+@use './blocks/main/main.scss'

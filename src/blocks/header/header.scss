@@ -1,0 +1,12 @@
+@use './__logo/header__logo.scss';
+@use './__title/header__title.scss';
+
+.header {
+  width: 100%;
+  height: 74px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
