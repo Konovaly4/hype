@@ -1,11 +1,11 @@
 @use '../__buttons/main__buttons.scss';
-@use '../__chairkit-wrapper/main__chairkit-wrapper.scss';
+@use '../__chairkit/main__chairkit.scss';
 
-.main__images-wrapper {
+.main__images {
   width: 100%;
-  height: 176px;
+  height: 195px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
+  // overflow: hidden;
 }

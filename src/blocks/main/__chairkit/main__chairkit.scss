@@ -1,7 +1,8 @@
 @use '../__light-big/main__light-big.scss';
 @use '../__image-chair/main__image-chair.scss';
+@use '../__light-small/main__light-small.scss';
 
-.main__chairkit-wrapper {
+.main__chairkit {
   max-width: 400px;
   height: 100%;
   margin: 0 13vw 0 0;
