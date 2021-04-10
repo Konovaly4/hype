@@ -1,0 +1,15 @@
+@use '../../constants/colors.scss';
+@use '../../constants/fonts.scss';
+
+.main__annotation-title {
+  width: 76%;
+  margin: 72px 0 14px;
+  padding: 0;
+  text-align: left;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 121.5%;
+  color: colors.$black;
+}

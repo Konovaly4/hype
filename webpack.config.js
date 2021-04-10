@@ -33,7 +33,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
+          { loader: 'css-loader', options: { url: false } },
           "postcss-loader",
           "sass-loader",
         ],
@@ -41,14 +41,14 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-        filename: 'style.[contenthash].css'
-    }),
     new HtmlWebpackPlugin({
       inject: false,
       template: './src/index.html',
       filename: 'index.html'
     }),
     new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'style.[contenthash].css'
+  }),
   ]
 }

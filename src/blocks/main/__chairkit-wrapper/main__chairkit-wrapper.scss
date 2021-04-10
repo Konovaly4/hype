@@ -1,0 +1,12 @@
+@use '../__light-big/main__light-big.scss';
+@use '../__image-chair/main__image-chair.scss';
+
+.main__chairkit-wrapper {
+  max-width: 400px;
+  height: 100%;
+  margin: 0 13vw 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}

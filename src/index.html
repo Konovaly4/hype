@@ -14,7 +14,30 @@
       <img src="<%=require('./images/header/title.svg')%>" alt="header-title" class="header__title">
     </section>
     <section class="main">
-      
+      <article class="main__images-wrapper">
+        <ul class="main__buttons">
+          <li class="main__button-wrapper">
+            <button class="main__button"></button>
+          </li>
+          <li class="main__button-wrapper">
+            <button class="main__button"></button>
+          </li>
+          <li class="main__button-wrapper">
+            <button class="main__button"></button>
+          </li>
+        </ul>
+        <div class="main__chairkit-wrapper">
+          <img src="<%=require('./images/main/main-light-big.svg')%>" alt="light-big" class="main__light-big">
+          <img src="<%=require('./images/main/main-chair.svg')%>" alt="chair" class="main__image-chair">
+          <img src="<%=require('./images/main/main-light-small.svg')%>" alt="light-small" class="main__light-small">
+        </div>
+      </article>
+      <article class="main__annotation">
+        <h2 class="main__annotation-title">Дизайн маленькой квартиры:<br>5 решений, которые экономят место</h2>
+        <p class="main__annotation-subtitle">Подробное руководство от Rerooms и Hype</p>
+        <p class="main__annotation-description">Одна из самых сложных задач в дизайне маленькой квартиры — вписать все, что нужно для жизни так, чтобы осталось пространство и много света. Два основных принципа работы дизайнера в этой ситуации — продуманная планировка и тщательно рассчитанное наполнение. Отвоевать свободные сантиметры можно с помощью скрытых систем хранения, мебели-трансформера, игры цветов и фактур. 
+          А визуально разгрузить пространство помогают зрительные иллюзии. Вместе с Rerooms делимся удачными решениями и рассказываем, как сэкономить место на ограниченной площади.</p>
+      </article>
     </section>
   </div>
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
