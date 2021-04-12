@@ -1,5 +1,6 @@
-@forward '../../vendor/fonts/Montserrat/stylesheet.css';
 @use '../constants/colors';
+@use '../header/header.scss';
+@use '../main/main.scss';
 
 .root {
   color: colors.$white;
