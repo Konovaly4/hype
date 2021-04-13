@@ -40,6 +40,13 @@ module.exports = {
           },
           // { loader: 'css-loader', options: { url: false } },
           { loader: "postcss-loader" },
+          { loader: "resolve-url-loader",
+            options: {
+              sourceMap: true,
+              engine: "rework",
+              root: "",
+            },
+          },
           { loader: "sass-loader", 
             options: {
               sourceMap: true,

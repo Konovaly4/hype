@@ -1,0 +1,36 @@
+.main__chairkit {
+  max-width: 400px;
+  height: 100%;
+  margin: 0 13vw 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+
+  &-light-big {
+    width: 59px;
+    height: 107px;
+    // height: 124px;
+    margin: 0 38px 0 0;
+    padding: 0;
+    object-fit: contain;
+    // transform: translateY(-17px);
+  }
+
+  &-chair {
+    width: 200px;
+    height: 190px;
+    margin: 0 61px 0 0;
+    padding: 0;
+    object-fit: contain;
+    align-self: flex-end;
+    // transform: translateY(13px);
+  }
+
+  &-light-small {
+    width: 43px;
+    height: 77px;
+    margin: 0;
+    object-fit: contain;
+  }
+}

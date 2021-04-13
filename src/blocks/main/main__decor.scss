@@ -1,0 +1,28 @@
+.main__decor {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  z-index: 2;
+
+  &-tree {
+    width: 210px;
+    height: 347px;
+    margin: 0 0 0 5.5%;
+    padding: 0;
+    object-fit: contain;
+    object-position: center;
+    transform: translateY(144px);
+  }
+
+  &-sockle {
+    width: 161px;
+    height: 345px;
+    margin: 0 6.25% 0 0;
+    padding: 0;
+    object-position: center;
+    object-fit: contain;
+    transform: translateY(8px);
+  }
+}

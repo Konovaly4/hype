@@ -1,0 +1,59 @@
+@use '../constants/colors.scss';
+@use '../constants/fonts.scss';
+
+.main__annotation {
+  width: 67%;
+  // max-width: 970px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: colors.$white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  top: 176px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &-title {
+    width: 76%;
+    margin: 72px 0 14px;
+    padding: 0;
+    text-align: left;
+    font-family: fonts.$base-font;
+    // font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 121.5%;
+    color: colors.$black;
+  }
+
+  &-subtitle {
+    width: 76%;
+    text-align: left;
+    margin: 0 0 39px 0;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 121.5%;
+    color: colors.$green;
+  }
+
+  &-description {
+    width: 76%;
+    text-align: left;
+    margin: 0 0 86px 0;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: colors.$black;
+  }
+}
