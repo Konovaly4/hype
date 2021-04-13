@@ -1,6 +1,7 @@
 @use '../constants/colors';
 @use '../header/header.scss';
 @use '../main/main.scss';
+@use '../illumination/illumination.scss';
 
 .root {
   color: colors.$white;
