@@ -2,6 +2,7 @@
 @use '../header/header.scss';
 @use '../main/main.scss';
 @use '../illumination/illumination.scss';
+@use '../note/note.scss';
 
 .root {
   color: colors.$white;

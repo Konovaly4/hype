@@ -1,0 +1,61 @@
+@use '../constants/colors.scss';
+@use '../constants/fonts.scss';
+
+.illumination__description {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto 47px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &-title {
+    margin: 0 0 28px;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 150%;
+    color: colors.$black;
+  }
+
+  &-text {
+    margin: 0 0 40px;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: colors.$black;
+
+    &_last {
+      margin: 0 0 50px;
+    }
+  }
+
+  &-tips {
+    width: 100%;
+    background: colors.$white;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 9px;
+    margin: 0 0 39px;
+    padding: 37px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &-tips-list {
+    list-style-type: none;
+  }
+
+  &-tip {
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 175%;
+    color: colors.$black;
+  }
+}

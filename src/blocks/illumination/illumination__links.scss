@@ -1,0 +1,48 @@
+@use '../constants/colors.scss';
+@use '../constants/fonts.scss';
+
+.illumination__links {
+  width: 100%;
+  max-width: 971px;
+  max-height: 210px;
+  margin: 146px auto 72px;
+  // padding: 109px 55px;
+  padding: 0;
+  border: 1px solid #D9DDE9;
+  box-sizing: border-box;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &-list {
+    margin: 55px 0;
+    padding: 0;
+    text-align: left;
+    list-style-type: none;
+  }
+  
+  &-item {
+    margin: 0;
+    padding: 0;
+  
+    &:before {
+      content: '1';
+      background-color: colors.$green;
+      width: 7px;
+      height: 9px;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+  }
+  
+  &-link {
+    color: colors.$green;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 195.5%;
+    text-decoration: none;
+  }
+}
+
