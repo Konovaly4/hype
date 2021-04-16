@@ -1,19 +1,15 @@
 @use '../constants/colors.scss';
 @use '../constants/fonts.scss';
 
-.illumination__links {
+.links {
   width: 100%;
   max-width: 971px;
-  max-height: 210px;
-  margin: 146px auto 72px;
   // padding: 109px 55px;
   padding: 0;
   border: 1px solid #D9DDE9;
   box-sizing: border-box;
   border-radius: 9px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
 
   &-list {
     margin: 55px 0;
@@ -45,4 +41,3 @@
     text-decoration: none;
   }
 }
-

@@ -1,7 +1,8 @@
 @use '../constants/colors.scss';
 @use '../constants/fonts.scss';
-@use './illumination__links.scss';
-@use './illumination__description.scss';
+@use '../description/description.scss';
+@use '../links/links.scss';
+
 
 .illumination {
   width: 100%;
@@ -10,4 +11,31 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  &__description {
+    margin: 0 auto 47px;
+  
+    &-title {
+      margin: 0 0 28px;
+    }
+  
+    &-text {
+      margin: 0 0 40px;
+  
+      &_last {
+        margin: 0 0 50px;
+      }
+    }
+  
+    &-tips {
+      margin: 0 0 39px;
+    }
+  }
+
+  &__links {
+    max-height: 210px;
+    margin: 146px auto 72px;
+    justify-content: space-around;
+    align-items: center;
+  }
 }

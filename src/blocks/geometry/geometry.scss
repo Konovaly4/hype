@@ -1,0 +1,44 @@
+@use '../constants/colors.scss';
+@use '../constants/fonts.scss';
+@use '../description/description.scss';
+@use '../tips/tips.scss';
+
+.geometry {
+  width: 100%;
+  background-color: colors.$white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+
+  &__pic {
+    position: absolute;
+    top: 104px;
+    right: 290px;
+  }
+
+  &__description {
+    position: relative;
+
+    &-title {
+      margin: 155px 0 28px;
+    }
+
+    &-text {
+      margin: 0 0 50px;
+
+      &:first-of-type {
+        margin: 0;
+      }
+
+      &-last {
+        margin: 0 0 85px;
+      }
+    }
+  }
+
+  &__tips {
+    margin: 0 0 39px;
+  }
+}

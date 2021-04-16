@@ -3,6 +3,7 @@
 @use '../main/main.scss';
 @use '../illumination/illumination.scss';
 @use '../note/note.scss';
+@use '../geometry/geometry.scss';
 
 .root {
   color: colors.$white;
