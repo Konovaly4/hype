@@ -1,0 +1,115 @@
+@use '../constants/colors.scss';
+@use '../constants/fonts.scss';
+
+.design {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-image: url('../../images/design/design-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__area {
+    width: 100%;
+    max-width: 970px;
+    margin: 96px auto 117px;
+    // padding: 84px 99px 169px; 
+    background: colors.$white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__grid {
+    width: 100%;
+    max-width: 772px;
+    margin: 99px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "text1 text1"
+    "list bonus"
+    "text2 text2";
+  }
+
+  &__text {
+    margin: 0;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: colors.$black;
+
+    &_one {
+      margin: 0 0 53px;
+      max-width: 706px;
+      grid-area: text1;
+    }
+
+    &_bonus {
+      margin: 41px 0 0;
+      max-width: 319px;
+      grid-area: bonus;
+    }
+
+    &_two {
+      margin: 0 0 89px;
+      max-width: 706px;
+      grid-area: text2;
+    }
+  }
+
+  &__highlight {
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 160%;
+
+    &_green {
+      color: colors.$green;
+    }
+
+    &_black {
+      color: colors.$black;
+    }
+  }
+
+  &__link-wrapper {
+    margin: 0 0 54px;
+    grid-area: list;
+  }
+
+  &__title {
+    margin: 0 0 15px;
+    padding: 0;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 160%;
+    color: colors.$black;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    max-width: 316px;
+
+    &-item {
+      font-family: fonts.$base-font;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 160%;
+      color: #000000;
+    }
+  }
+
+
+}

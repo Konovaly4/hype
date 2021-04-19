@@ -7,6 +7,8 @@
 @use '../texture/texture.scss';
 @use '../object/object.scss';
 @use '../filling/filling.scss';
+@use '../design/design.scss';
+@use '../stages/stages.scss';
 
 .root {
   color: colors.$white;
