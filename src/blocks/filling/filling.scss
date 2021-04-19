@@ -1,0 +1,25 @@
+@use '../constants/colors.scss';
+@use '../constants/fonts.scss';
+@use '../description/description.scss';
+
+.filling {
+  width: 100%;
+  background-color: colors.$white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+
+  &__description {
+    margin: 109px 0 0;
+
+    &-title {
+      margin: 0 0 28px;
+    }
+
+    &-text {
+      margin: 0 0 50px;
+    }
+  }
+}

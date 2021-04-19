@@ -1,0 +1,50 @@
+@use '../constants/colors.scss';
+@use '../constants/fonts.scss';
+
+.object {
+  width: 100%;
+  background-color: colors.$white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+
+  &__description {
+    margin: 118px 0 0;
+
+    &-title {
+      margin: 0 0 28px;
+    }
+
+    &-text {
+      &:first-of-type {
+        margin: 0 0 30px;
+      }
+
+      &:nth-last-of-type(2) {
+        margin: 0 0 31px;
+      }
+
+      &_last {
+        margin: 0 0 60px;
+      }
+    }
+  }
+
+  &__links {
+    margin: 0 0 31px;
+  }
+
+  &__links-list {
+    margin: 34px 0;
+  }
+
+  &__sockle {
+    width: 126px;
+    height: 275px;
+    position: absolute;
+    bottom: 344px;
+    right: 174px;
+  }
+}
