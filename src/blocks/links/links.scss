@@ -23,11 +23,13 @@
     padding: 0;
   
     &:before {
-      content: '1';
+      content: "";
+      display: inline-block;
       background-color: colors.$green;
       width: 7px;
       height: 9px;
       clip-path: polygon(0 0, 100% 50%, 0 100%);
+      margin: 0 10px 2px 0;
     }
   }
   

@@ -100,6 +100,7 @@
     margin: 0;
     padding: 0;
     max-width: 316px;
+    list-style-position: inside;
 
     &-item {
       font-family: fonts.$base-font;
