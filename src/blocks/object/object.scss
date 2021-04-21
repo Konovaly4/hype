@@ -2,13 +2,13 @@
 @use '../constants/fonts.scss';
 
 .object {
-  width: 100%;
-  background-color: colors.$white;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  position: relative;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: colors.$white;
 
   &__description {
     margin: 118px 0 0;
@@ -42,10 +42,10 @@
   }
 
   &__sockle {
+    position: absolute;
+    right: 174px;
+    bottom: 344px;
     width: 126px;
     height: 275px;
-    position: absolute;
-    bottom: 344px;
-    right: 174px;
   }
 }

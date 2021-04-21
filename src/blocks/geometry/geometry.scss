@@ -4,13 +4,13 @@
 @use '../tips/tips.scss';
 
 .geometry {
-  width: 100%;
-  background-color: colors.$white;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  position: relative;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: colors.$white;
 
   &__pic {
     position: absolute;

@@ -3,33 +3,33 @@
 @use '../tips/tips.scss';
 
 .description {
-  width: 100%;
-  max-width: 770px;
   // margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 770px;
 
   &-title {
     margin: 0;
     padding: 0;
-    font-family: fonts.$base-font;
-    font-style: normal;
+    color: colors.$black;
     font-weight: 500;
     font-size: 42px;
+    font-family: fonts.$base-font;
+    font-style: normal;
     line-height: 150%;
-    color: colors.$black;
   }
 
   &-text {
     margin: 0;
     padding: 0;
-    font-family: fonts.$base-font;
-    font-style: normal;
+    color: colors.$black;
     font-weight: normal;
     font-size: 16px;
+    font-family: fonts.$base-font;
+    font-style: normal;
     line-height: 150%;
-    color: colors.$black;
   }
-}  
+}

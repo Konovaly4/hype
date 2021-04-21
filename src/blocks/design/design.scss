@@ -2,73 +2,73 @@
 @use '../constants/fonts.scss';
 
 .design {
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
   background-image: url('../../images/design/design-bg.jpg');
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
 
   &__area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
     max-width: 970px;
     margin: 96px auto 117px;
-    // padding: 84px 99px 169px; 
+    // padding: 84px 99px 169px;
     background: colors.$white;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
   }
 
   &__grid {
+    display: grid;
+    grid-template-areas:
+      'text1 text1'
+      'list bonus'
+      'text2 text2';
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
     max-width: 772px;
     margin: 99px 0 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: 
-    "text1 text1"
-    "list bonus"
-    "text2 text2";
   }
 
   &__text {
     margin: 0;
-    font-family: fonts.$base-font;
-    font-style: normal;
+    color: colors.$black;
     font-weight: normal;
     font-size: 16px;
+    font-family: fonts.$base-font;
+    font-style: normal;
     line-height: 26px;
-    color: colors.$black;
 
     &_one {
-      margin: 0 0 53px;
-      max-width: 706px;
       grid-area: text1;
+      max-width: 706px;
+      margin: 0 0 53px;
     }
 
     &_bonus {
-      margin: 41px 0 0;
-      max-width: 319px;
       grid-area: bonus;
+      max-width: 319px;
+      margin: 41px 0 0;
     }
 
     &_two {
-      margin: 0 0 89px;
-      max-width: 706px;
       grid-area: text2;
+      max-width: 706px;
+      margin: 0 0 89px;
     }
   }
 
   &__highlight {
-    font-family: fonts.$base-font;
-    font-style: normal;
     font-weight: bold;
     font-size: 16px;
+    font-family: fonts.$base-font;
+    font-style: normal;
     line-height: 160%;
 
     &_green {
@@ -81,36 +81,34 @@
   }
 
   &__link-wrapper {
-    margin: 0 0 54px;
     grid-area: list;
+    margin: 0 0 54px;
   }
 
   &__title {
     margin: 0 0 15px;
     padding: 0;
-    font-family: fonts.$base-font;
-    font-style: normal;
+    color: colors.$black;
     font-weight: bold;
     font-size: 16px;
+    font-family: fonts.$base-font;
+    font-style: normal;
     line-height: 160%;
-    color: colors.$black;
   }
 
   &__list {
+    max-width: 316px;
     margin: 0;
     padding: 0;
-    max-width: 316px;
     list-style-position: inside;
 
     &-item {
-      font-family: fonts.$base-font;
-      font-style: normal;
+      color: #000;
       font-weight: normal;
       font-size: 16px;
+      font-family: fonts.$base-font;
+      font-style: normal;
       line-height: 160%;
-      color: #000000;
     }
   }
-
-
 }

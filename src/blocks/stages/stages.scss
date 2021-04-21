@@ -3,69 +3,69 @@
 @use '../button/button.scss';
 
 .stages {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 
   &__title {
     margin: 99px auto 71px;
-    font-family: fonts.$base-font;
-    font-style: normal;
+    color: colors.$black;
     font-weight: 500;
     font-size: 42px;
+    font-family: fonts.$base-font;
+    font-style: normal;
     line-height: 150%;
-    color: colors.$black;
   }
 
   &__stage-container {
-    margin: 0 0 27px;
     display: grid;
-    grid-template-columns: min-content min-content min-content;
-    grid-template-rows: min-content min-content min-content;
     grid-gap: 25px;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: min-content min-content min-content;
+    margin: 0 0 27px;
   }
 
   &__stage {
+    display: grid;
+    grid-template-areas:
+      'number date marker'
+      'title title title'
+      'text text text';
+    grid-template-rows: min-content min-content auto;
+    grid-template-columns: 70px auto 61px;
+    align-items: center;
+    justify-items: start;
     width: 380px;
     height: 360px;
-    display: grid;
-    grid-template-columns: 70px auto 61px;
-    grid-template-rows: min-content min-content auto;
-    grid-template-areas: 
-    "number date marker" 
-    "title title title"
-    "text text text";
-    justify-items: start;
-    align-items: center;
 
     &-number {
+      grid-area: number;
       width: auto;
       // height: 40px;
       max-width: 70px;
       margin: 0 20px 0 0;
       padding: 0;
-      font-family: fonts.$base-font;
-      font-style: normal;
+      color: colors.$green;
       font-weight: 500;
       font-size: 50px;
+      font-family: fonts.$base-font;
+      font-style: normal;
       line-height: 100%;
-      color: colors.$green;
-      grid-area: number;
     }
 
     &-date {
+      grid-area: date;
+      align-self: left;
       margin: 0;
       padding: 0;
-      align-self: left;
-      font-family: fonts.$base-font;
-      font-style: normal;
+      color: colors.$gray;
       font-weight: normal;
       font-size: 16px;
+      font-family: fonts.$base-font;
+      font-style: normal;
       line-height: 140%;
-      color: colors.$gray;
-      grid-area: date;
 
       &_one {
         max-width: 176px;
@@ -77,11 +77,11 @@
     }
 
     &-line {
+      grid-area: marker;
       width: 100%;
       height: 0;
       background-color: colors.$gray;
       border-bottom: 2px dashed colors.$white;
-      grid-area: marker;
 
       &_last {
         display: none;
@@ -90,35 +90,35 @@
 
     &-line-dot {
       width: 100%;
+      height: 2px;
       margin-bottom: 50px;
-      height: 2px;      
-      background-image: repeating-linear-gradient(to left, black 8px, transparent 4px);  
-    }  
+      background-image: repeating-linear-gradient(to left, black 8px, transparent 4px);
+    }
 
     &-title {
+      grid-area: title;
+      align-self: start;
       margin: 35px 0 10px;
       padding: 0;
-      font-family: fonts.$base-font;
-      font-style: normal;
+      color: colors.$black;
       font-weight: 600;
       font-size: 20px;
+      font-family: fonts.$base-font;
+      font-style: normal;
       line-height: 160%;
-      color: colors.$black;
-      align-self: start;
-      grid-area: title;
     }
 
     &-description {
+      grid-area: text;
+      align-self: start;
       margin: 0;
       padding: 0;
-      font-family: fonts.$base-font;
-      font-style: normal;
+      color: colors.$black;
       font-weight: normal;
       font-size: 16px;
+      font-family: fonts.$base-font;
+      font-style: normal;
       line-height: 150%;
-      color: colors.$black;
-      align-self: start;
-      grid-area: text;
     }
   }
 

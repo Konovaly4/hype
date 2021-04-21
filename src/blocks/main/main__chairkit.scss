@@ -1,11 +1,11 @@
 .main__chairkit {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   max-width: 400px;
   height: 100%;
   margin: 0 13vw 0 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: relative;
 
   &-light-big {
     width: 59px;
@@ -18,12 +18,12 @@
   }
 
   &-chair {
+    align-self: flex-end;
     width: 200px;
     height: 190px;
     margin: 0 61px 0 0;
     padding: 0;
     object-fit: contain;
-    align-self: flex-end;
     // transform: translateY(13px);
   }
 

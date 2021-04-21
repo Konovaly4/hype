@@ -3,13 +3,13 @@
 @use '../description/description.scss';
 
 .texture {
-  width: 100%;
-  background-color: colors.$white;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  position: relative;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: colors.$white;
 
   &__description {
     margin: 97px 0 0;
@@ -20,8 +20,8 @@
 
     &-text {
       &:last-of-type {
-        margin: 0 0 66px; 
+        margin: 0 0 66px;
       }
     }
-  }  
+  }
 }

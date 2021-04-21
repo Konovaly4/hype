@@ -2,14 +2,14 @@
 @use '../constants/fonts.scss';
 
 .links {
+  display: flex;
+  box-sizing: border-box;
   width: 100%;
   max-width: 971px;
   // padding: 109px 55px;
   padding: 0;
-  border: 1px solid #D9DDE9;
-  box-sizing: border-box;
+  border: 1px solid #d9dde9;
   border-radius: 9px;
-  display: flex;
 
   &-list {
     margin: 0;
@@ -17,28 +17,28 @@
     text-align: left;
     list-style-type: none;
   }
-  
+
   &-item {
     margin: 0;
     padding: 0;
-  
-    &:before {
-      content: "";
+
+    &::before {
       display: inline-block;
-      background-color: colors.$green;
       width: 7px;
       height: 9px;
-      clip-path: polygon(0 0, 100% 50%, 0 100%);
       margin: 0 10px 2px 0;
+      background-color: colors.$green;
+      content: '';
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
     }
   }
-  
+
   &-link {
     color: colors.$green;
-    font-family: fonts.$base-font;
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
+    font-family: fonts.$base-font;
+    font-style: normal;
     line-height: 195.5%;
     text-decoration: none;
   }

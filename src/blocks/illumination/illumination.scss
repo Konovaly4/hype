@@ -3,30 +3,29 @@
 @use '../description/description.scss';
 @use '../links/links.scss';
 
-
 .illumination {
-  width: 100%;
-  background-color: colors.$white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: colors.$white;
 
   &__description {
     margin: 0 auto 47px;
-  
+
     &-title {
       margin: 0 0 28px;
     }
-  
+
     &-text {
       margin: 0 0 40px;
-  
+
       &_last {
         margin: 0 0 50px;
       }
     }
-  
+
     &-tips {
       margin: 0 0 39px;
     }
@@ -37,9 +36,9 @@
   }
 
   &__links {
+    align-items: center;
+    justify-content: space-around;
     max-height: 210px;
     margin: 146px auto 72px;
-    justify-content: space-around;
-    align-items: center;
   }
 }
