@@ -11,6 +11,7 @@ module.exports = {
     filename: '[name].[chunkhash].js'
   },
   devServer: {
+    contentBase: path.resolve(__dirname, './dist'),
     hot: true,
     compress: true,
     port: 8080,
@@ -27,7 +28,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
-        type: 'asset/resource',
+        type: 'asset',
       },
       {
         test: /\.s[ac]ss$/i,
