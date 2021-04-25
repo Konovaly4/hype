@@ -4,7 +4,7 @@
 .tips {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   padding: 37px 0;
   background: colors.$white;
@@ -13,16 +13,42 @@
 
   &-list {
     margin: 0;
-    // padding: 0;
+    padding: 0;
     list-style-type: none;
+    width: 91%;
   }
 }
 
 .tip {
-  color: colors.$black;
-  font-weight: 500;
-  font-size: 16px;
-  font-family: fonts.$base-font;
-  font-style: normal;
-  line-height: 175%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__mark {
+    background-image: url('../../images/tips/tip-mark.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 9px;
+    margin: 10px 23px 0 0;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    color: colors.$black;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    line-height: 175%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tips {
+    &__list {
+      width: 88%;
+    }
+  }
 }

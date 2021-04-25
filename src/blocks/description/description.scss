@@ -16,7 +16,7 @@
     padding: 0;
     color: colors.$black;
     font-weight: 500;
-    font-size: 42px;
+    font-size: 35px;
     font-family: fonts.$base-font;
     font-style: normal;
     line-height: 150%;
@@ -31,5 +31,19 @@
     font-family: fonts.$base-font;
     font-style: normal;
     line-height: 150%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .description {
+    &-title {
+      font-size: 42px;
+      line-height: 150%;
+    }
+
+    &-text {
+      font-size: 16px;
+      line-height: 150%; 
+    }
   }
 }

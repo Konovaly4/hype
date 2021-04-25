@@ -15,47 +15,51 @@
       <img src="<%=require('./images/header/title.svg')%>" alt="header-title" class="header__title">
     </section>
     <section class="main">
-      <div class="main__images">
-        <ul class="main__buttons">
-          <li class="main__buttons-wrapper">
-            <button class="main__buttons-button"></button>
-          </li>
-          <li class="main__buttons-wrapper">
-            <button class="main__buttons-button"></button>
-          </li>
-          <li class="main__buttons-wrapper">
-            <button class="main__buttons-button"></button>
-          </li>
-        </ul>
-        <div class="main__chairkit">
-          <img src="<%=require('./images/main/main-light-big.svg')%>" alt="light-big" class="main__chairkit-light-big">
-          <img src="<%=require('./images/main/main-chair.svg')%>" alt="chair" class="main__chairkit-chair">
-          <img src="<%=require('./images/main/main-light-small.svg')%>" alt="light-small" class="main__chairkit-light-small">
+      <div class="main__wrapper">
+        <div class="main__images">
+          <ul class="main__buttons">
+            <li class="main__buttons-wrapper">
+              <button class="main__buttons-button"></button>
+            </li>
+            <li class="main__buttons-wrapper">
+              <button class="main__buttons-button"></button>
+            </li>
+            <li class="main__buttons-wrapper">
+              <button class="main__buttons-button"></button>
+            </li>
+          </ul>
+          <div class="main__chairkit">
+            <img src="<%=require('./images/main/main-light-big.svg')%>" alt="light-big" class="main__chairkit-light-big">
+            <img src="<%=require('./images/main/main-chair.svg')%>" alt="chair" class="main__chairkit-chair">
+            <img src="<%=require('./images/main/main-light-small.svg')%>" alt="light-small" class="main__chairkit-light-small">
+          </div>
+        </div>
+        <article class="main__annotation">
+          <h2 class="main__annotation-title">Дизайн маленькой квартиры:<br>5 решений, которые экономят место</h2>
+          <p class="main__annotation-subtitle">Подробное руководство от Rerooms и Hype</p>
+          <p class="main__annotation-description">Одна из самых сложных задач в дизайне маленькой квартиры — вписать все, что нужно для жизни так, чтобы осталось пространство и много света. Два основных принципа работы дизайнера в этой ситуации — продуманная планировка и тщательно рассчитанное наполнение. Отвоевать свободные сантиметры можно с помощью скрытых систем хранения, мебели-трансформера, игры цветов и фактур. 
+            А визуально разгрузить пространство помогают зрительные иллюзии. Вместе с Rerooms делимся удачными решениями и рассказываем, как сэкономить место на ограниченной площади.</p>
+        </article>
+        <div class="main__decor">
+          <img src="<%=require('./images/main/main-tree.svg')%>" alt="tree" class="main__decor-tree">
+          <img src="<%=require('./images/main/main-sockle.svg')%>" alt="sockle" class="main__decor-sockle">
         </div>
       </div>
-      <div class="main__decor">
-        <img src="<%=require('./images/main/main-tree.svg')%>" alt="tree" class="main__decor-tree">
-        <img src="<%=require('./images/main/main-sockle.svg')%>" alt="sockle" class="main__decor-sockle">
-      </div>
-      <article class="main__annotation">
-        <h2 class="main__annotation-title">Дизайн маленькой квартиры:<br>5 решений, которые экономят место</h2>
-        <p class="main__annotation-subtitle">Подробное руководство от Rerooms и Hype</p>
-        <p class="main__annotation-description">Одна из самых сложных задач в дизайне маленькой квартиры — вписать все, что нужно для жизни так, чтобы осталось пространство и много света. Два основных принципа работы дизайнера в этой ситуации — продуманная планировка и тщательно рассчитанное наполнение. Отвоевать свободные сантиметры можно с помощью скрытых систем хранения, мебели-трансформера, игры цветов и фактур. 
-          А визуально разгрузить пространство помогают зрительные иллюзии. Вместе с Rerooms делимся удачными решениями и рассказываем, как сэкономить место на ограниченной площади.</p>
-      </article>
     </section>
-    <section class="illumination">
-      <nav class="links illumination__links">
-        <ul class="links-list illumination__links-list">
-          <li class="links-item illumination__links-item"><a href="" class="links-link illumination__links-link">Свет и тени</a></li>
-          <li class="links-item illumination__links-item"><a href="" class="links-link illumination__links-link">Квадратная геометрия</a></li>
-          <li class="links-item illumination__links-item"><a href="" class="links-link illumination__links-link">Выбор фактур</a></li>
+    <section class="menu">
+      <nav class="links menu__links">
+        <ul class="links-list menu__links-list">
+          <li class="links-item menu__links-item"><a href="" class="links-link menu__links-link">Свет и тени</a></li>
+          <li class="links-item menu__links-item"><a href="" class="links-link menu__links-link">Квадратная геометрия</a></li>
+          <li class="links-item menu__links-item"><a href="" class="links-link menu__links-link">Выбор фактур</a></li>
         </ul>
-        <ul class="links-list illumination__links-list">
-          <li class="links-item illumination__links-item"><a href="" class="links-link illumination__links-link">Предметы-трансформеры</a></li>
-          <li class="links-item illumination__links-item"><a href="" class="links-link illumination__links-link">Наполнение вертикали</a></li>
+        <ul class="links-list menu__links-list">
+          <li class="links-item menu__links-item"><a href="" class="links-link menu__links-link">Предметы-трансформеры</a></li>
+          <li class="links-item menu__links-item"><a href="" class="links-link menu__links-link">Наполнение вертикали</a></li>
         </ul>
       </nav>
+    </section>
+    <section class="illumination">
       <article class="description illumination__description">
         <h1 class="description-title illumination__description-title">Свет и тени</h1>
         <p class="description-text illumination__description-text">
@@ -65,9 +69,18 @@
         </p>
         <div class="tips illumination__description-tips">
           <ul class="tips-list illumination__description-tips-list">
-            <li class="tip illumination__description-tip">зонирование помещения без установки перегородок</li>
-            <li class="tip illumination__description-tip">визуальное расширение пространства;</li>
-            <li class="tip illumination__description-tip">расстановка акцентов.</li>
+            <li class="tip illumination__description-tip">
+              <div class="tip__mark"></div>
+              <p class="tip__text">зонирование помещения без установки перегородок;</p>
+            </li>
+            <li class="tip illumination__description-tip">
+              <div class="tip__mark"></div>
+              <p class="tip__text">визуальное расширение пространства;</p>
+            </li>
+            <li class="tip illumination__description-tip">
+              <div class="tip__mark"></div>
+              <p class="tip__text">визуальное расширение пространства;</p>
+            </li>
           </ul>
         </div>
         <p class="description-text illumination__description-text illumination__description-text_last">

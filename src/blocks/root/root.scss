@@ -1,6 +1,7 @@
 @use '../constants/colors';
 @use '../header/header.scss';
 @use '../main/main.scss';
+@use '../menu/menu.scss';
 @use '../illumination/illumination.scss';
 @use '../note/note.scss';
 @use '../geometry/geometry.scss';
@@ -11,11 +12,12 @@
 @use '../stages/stages.scss';
 
 .root {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
-  margin: 0 auto;
   color: colors.$white;
 }

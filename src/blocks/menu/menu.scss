@@ -1,0 +1,46 @@
+@use '../constants/colors.scss';
+@use '../constants/fonts.scss';
+@use '../links/links.scss';
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1440px;
+  background-color: colors.$white;
+
+  &__links {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    margin: 69px auto 64px;
+  }
+
+  &__links-list {
+    margin: 27px 40px 0;
+
+    &:nth-of-type(2) {
+      margin: 0 40px 27px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+
+    &__links {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
+      margin: 146px auto 72px;
+      max-height: 210px;
+    }
+
+    &__links-list,  &__links-list:nth-of-type(2) {
+      margin: 55px 0;
+    }
+  }
+}

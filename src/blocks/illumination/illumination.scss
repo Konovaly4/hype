@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
+  width: 95%;
   background-color: colors.$white;
 
   &__description {
@@ -30,15 +30,10 @@
       margin: 0 0 39px;
     }
   }
+}
 
-  &__links-list {
-    margin: 55px 0;
-  }
-
-  &__links {
-    align-items: center;
-    justify-content: space-around;
-    max-height: 210px;
-    margin: 146px auto 72px;
-  }
+@media screen and (min-width: 768px) {
+  .illumination {
+    width: 100%;
+  }  
 }
