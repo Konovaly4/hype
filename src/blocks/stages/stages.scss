@@ -38,8 +38,8 @@
     grid-template-columns: 70px auto;
     align-items: center;
     justify-items: start;
-    width: 100%;
-    max-width: 380px;
+    width: 90vw;
+    // width: 380px;
     height: 360px;
 
     &-number {
@@ -129,6 +129,14 @@
 
   &__button {
     margin: 58px 0 140px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .stages {
+    &__stage {
+      width: 380px;
+    }
   }
 }
 
