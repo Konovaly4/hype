@@ -2,7 +2,6 @@
 @use '../constants/fonts.scss';
 
 .object {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +10,8 @@
   background-color: colors.$white;
 
   &__description {
-    margin: 118px 0 0;
+    position: relative;
+    margin: 44px 0 0;
 
     &-title {
       margin: 0 0 28px;
@@ -34,7 +34,7 @@
 
   &__links {
     margin: 0 0 31px;
-    padding: 0 109px;
+    padding: 0 44px;
   }
 
   &__links-list {
@@ -43,9 +43,26 @@
 
   &__sockle {
     position: absolute;
-    right: 174px;
+    right: -161px;
     bottom: 344px;
+    display: none;
     width: 126px;
     height: 275px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .object {
+    &__description {
+      margin: 118px 0 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .object {
+    &__sockle {
+      display: block;
+    }
   }
 }

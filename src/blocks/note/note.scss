@@ -13,6 +13,7 @@
   background-color: colors.$green;
 
   &__description {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -46,15 +47,23 @@
 
   &__quotes {
     position: absolute;
-    right: 213px;
-    bottom: 33px;
+    // right: -88px;
+    right: -30px;
+    // bottom: 10px;
+    bottom: -50px;
+    // position: absolute;
+    // right: 213px;
+    // bottom: 33px;
+    align-self: flex-end;
+    width: 88px;
+    height: 70px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   .note {
-    &__description {
-
+    &__quotes {
+      right: -88px;
     }
   }
 }

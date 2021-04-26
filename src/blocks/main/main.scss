@@ -5,7 +5,6 @@
 
 .main {
   display: flex;
-
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -87,7 +86,7 @@
     &__decor {
       &-tree {
         margin: 0 0 0 5.5%;
-        display: block; 
+        display: block;
       }
 
       &-sockle {
@@ -97,4 +96,3 @@
     }
   }
 }
-

@@ -30,16 +30,16 @@
 
 @media screen and (min-width: 768px) {
   .menu {
-
     &__links {
       flex-direction: row;
       align-items: flex-start;
       justify-content: space-around;
-      margin: 146px auto 72px;
       max-height: 210px;
+      margin: 146px auto 72px;
     }
 
-    &__links-list,  &__links-list:nth-of-type(2) {
+    &__links-list,
+    &__links-list:nth-of-type(2) {
       margin: 55px 0;
     }
   }
