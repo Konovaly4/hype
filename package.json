@@ -79,6 +79,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "core-js": "^3.9.1"
+    "core-js": "^3.9.1",
+    "tiny-slider": "^2.9.3"
   }
 }
