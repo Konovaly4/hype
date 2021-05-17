@@ -1,4 +1,15 @@
 import './style.scss';
-import headerLogo from './images/header/logo.svg';
+import { tns } from '../node_modules/tiny-slider/src/tiny-slider';
 
-const images = [{ name: 'header-logo', link: headerLogo }];
+const slider = tns({
+  container: '.my-slider',
+  items: 1,
+  fixedWidth: false,
+  gutter: 50,
+  slideBy: 'page',
+  autoplay: true,
+  center: true,
+  controlsPosition: 'bottom',
+  swipeAngle: false,
+});
+slider.pause();

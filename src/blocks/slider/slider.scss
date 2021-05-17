@@ -1,2 +1,62 @@
+@use '../constants/colors.scss';
+@use '../constants/fonts.scss';
+@use '../button/button.scss';
+@use './my-slider.scss';
+
 .slider {
+  margin: 0 0 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__title-container {
+    margin: 79px 0 22px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: colors.$light-gray;
+  }
+
+  &__pic-number-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__pic-number {
+    margin: 0;
+    padding: 0;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: colors.$green;
+  }
+
+  &__pic-quantity {
+    margin: 0;
+    padding: 0;
+    font-family: fonts.$base-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: colors.$light-gray;
+  }
 }

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 </head>
 <body>
   <div class="root">
@@ -96,7 +97,6 @@
         </p>
         <img src="<%=require('./images/note/note-quotes.svg')%>" alt="quotes-pic" class="note__quotes">
       </article>
-      <!-- <img src="<%=require('./images/note/note-quotes.svg')%>" alt="quotes-pic" class="note__quotes"> -->
     </section>
     <section class="slider">
       <div class="slider__title-container">
@@ -108,32 +108,16 @@
       </div>
       <ul class="my-slider">
         <li class="my-slider__item">
-          <picture class="slider__pic-container">
-            <source media="(max-width: 767px)" srcset="<%=require('./images/carousel_1/small/item-1.jpg')%>">
-            <source media="(min-width: 768px)" srcset="<%=require('./images/carousel_1/big/item-1.jpg')%>">
-            <img src="<%=require('./images/carousel_1/small/item-1.jpg')%>" alt="room-1" class="slider__pic">
-          </picture>
+          <img src="<%=require('./images/carousel_1/small/item-1.jpg')%>" alt="room-1" class="my-slider__pic">
         </li>
         <li class="my-slider__item" id="2">
-          <picture class="slider__pic-container">
-            <source media="(max-width: 767px)" srcset="<%=require('./images/carousel_1/small/item-2.jpg')%>">
-            <source media="(min-width: 768px)" srcset="<%=require('./images/carousel_1/big/item-2.jpg')%>">
-            <img src="<%=require('./images/carousel_1/small/item-2.jpg')%>" alt="room-1" class="slider__pic">
-          </picture>
+          <img src="<%=require('./images/carousel_1/small/item-2.jpg')%>" alt="room-1" class="slider__pic">
         </li>
         <li class="my-slider__item">
-          <picture class="slider__pic-container">
-            <source media="(max-width: 767px)" srcset="<%=require('./images/carousel_1/small/item-3.jpg')%>">
-            <source media="(min-width: 768px)" srcset="<%=require('./images/carousel_1/big/item-3.jpg')%>">
-            <img src="<%=require('./images/carousel_1/small/item-3.jpg')%>" alt="room-1" class="slider__pic">
-          </picture>
+          <img src="<%=require('./images/carousel_1/small/item-3.jpg')%>" alt="room-1" class="slider__pic">
         </li>
         <li class="my-slider__item">
-          <picture class="slider__pic-container">
-            <source media="(max-width: 767px)" srcset="<%=require('./images/carousel_1/small/item-4.jpg')%>">
-            <source media="(min-width: 768px)" srcset="<%=require('./images/carousel_1/big/item-4.jpg')%>">
-            <img src="<%=require('./images/carousel_1/small/item-4.jpg')%>" alt="room-1" class="slider__pic">
-          </picture>
+          <img src="<%=require('./images/carousel_1/small/item-4.jpg')%>" alt="room-1" class="slider__pic">
         </li>
         <li class="my-slider__item"></li>
       </ul>
