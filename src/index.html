@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
   <div class="root">
@@ -99,28 +99,27 @@
       </article>
     </section>
     <section class="slider">
-      <div class="slider__title-container">
+      <!-- <div class="slider__title-container">
         <p class="slider__title">Дизайн-проекты Rerooms</p>
         <div class="slider__pic-number-wrapper">
           <p class="slider__pic-number">1/</p>
           <p class="slider__pic-quantity">3</p>
         </div>
-      </div>
-      <ul class="my-slider">
-        <li class="my-slider__item">
+      </div> -->
+      <div class="my-slider">
+        <div class="my-slider__item">
           <img src="<%=require('./images/carousel_1/small/item-1.jpg')%>" alt="room-1" class="my-slider__pic">
-        </li>
-        <li class="my-slider__item" id="2">
-          <img src="<%=require('./images/carousel_1/small/item-2.jpg')%>" alt="room-1" class="slider__pic">
-        </li>
-        <li class="my-slider__item">
-          <img src="<%=require('./images/carousel_1/small/item-3.jpg')%>" alt="room-1" class="slider__pic">
-        </li>
-        <li class="my-slider__item">
-          <img src="<%=require('./images/carousel_1/small/item-4.jpg')%>" alt="room-1" class="slider__pic">
-        </li>
-        <li class="my-slider__item"></li>
-      </ul>
+        </div>
+        <div class="my-slider__item">
+          <img src="<%=require('./images/carousel_1/small/item-2.jpg')%>" alt="room-2" class="my-slider__pic">
+        </div>
+        <div class="my-slider__item">
+          <img src="<%=require('./images/carousel_1/small/item-3.jpg')%>" alt="room-3" class="my-slider__pic">
+        </div>
+        <div class="my-slider__item">
+          <img src="<%=require('./images/carousel_1/small/item-4.jpg')%>" alt="room-4" class="my-slider__pic">
+        </div>
+      </div>
     </section>
     <section class="geometry">
       <a id="geometry" class="anchor"></a>
