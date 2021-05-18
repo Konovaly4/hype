@@ -2,6 +2,7 @@
 @use '../constants/fonts.scss';
 
 .button {
+  display: block;
   width: 100%;
   max-width: 382px;
   height: 60px;
@@ -12,7 +13,7 @@
   font-size: 18px;
   font-family: fonts.$base-font;
   font-style: normal;
-  line-height: 150%;
+  line-height: 320%;
   text-align: center;
   text-decoration: none;
   background-color: colors.$green;

@@ -24,22 +24,35 @@
 
   &__description {
     &-container {
+      margin: 30px 0 73px;
       width: 100%;
       max-width: 766px;
+      height: 58px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
     }
 
     &-wrapper {
-      width: 100%;
+      // width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
+
+      &_left {
+        padding: 0 48px 0 35px;
+        border-right: 1px solid colors.$border-gray;
+      }
+
+      &_right {
+        padding: 0 0 0 99px;
+      }
     }
 
     &-title {
+      margin: 0;
+      padding: 0;
       font-family: fonts.$base-font;
       font-style: normal;
       font-weight: normal;
@@ -49,12 +62,29 @@
     }
 
     &-value {
+      margin: 0;
+      padding: 0;
       font-family: fonts.$base-font;
       font-style: normal;
       font-weight: bold;
       font-size: 24px;
       line-height: 150%;
       color: colors.$black;
+    }
+  }
+
+  &__button {
+    width: 346px;
+    height: 60px;
+    align-self: center;
+    margin: 0;
+
+    &-container {
+      width: 100%;
+      max-width: 766px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
