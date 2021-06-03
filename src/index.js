@@ -6,7 +6,6 @@ const controlsPrevButton = document.querySelector('.slider__controls-button_prev
 const controlsNextButton = document.querySelector('.slider__controls-button_next');
 const dotsContainer = document.querySelector('.slider__dots-container');
 const sliderPicNumber = document.querySelector('.slider__pic-number');
-console.log(`pic - ${sliderPicNumber.textContent}`);
 
 const slider = tns({
   container: '.my-slider',
@@ -20,34 +19,31 @@ const slider = tns({
   navContainer: dotsContainer,
 });
 
-sliderPicNumber.textContent = `${slider.getInfo().index}`;
+sliderPicNumber.textContent = `${slider.getInfo().index}/`;
+console.log(`pic - ${sliderPicNumber.textContent}`);
 
 // tns-slide-active
 
-const showNextSlideIndex = (numberContainer) => {
+const showNextSlideIndex = () => {
   const sliderItems = slider.getInfo().slideCount;
-  console.log(numberContainer);
   const activeSlide = slider.getInfo().index;
   if (activeSlide === sliderItems) {
-    numberContainer.textContent = '1';
+    sliderPicNumber.textContent = `${1}/`;
   } else {
-    numberContainer.textContent = `${activeSlide + 1}`;
+    sliderPicNumber.textContent = `${activeSlide + 1}/`;
   }
-  console.log(numberContainer.textContent);
 };
 
-const showPrevSlideIndex = (numberContainer) => {
+const showPrevSlideIndex = () => {
   const sliderItems = slider.getInfo().slideCount;
-  console.log(numberContainer);
   const activeSlide = slider.getInfo().index;
   if (activeSlide === 1) {
-    numberContainer.textContent = `${sliderItems}`;
+    sliderPicNumber.textContent = `${sliderItems}/`;
   } else {
-    numberContainer.textContent = `${activeSlide - 1}`;
+    sliderPicNumber.textContent = `${activeSlide - 1}/`;
   }
-  console.log(numberContainer.textContent);
 };
 
-controlsPrevButton.addEventListener('click', showPrevSlideIndex(sliderPicNumber));
+controlsPrevButton.addEventListener('click', showPrevSlideIndex);
 
-controlsNextButton.addEventListener('click', showNextSlideIndex(sliderPicNumber));
+controlsNextButton.addEventListener('click', showNextSlideIndex);

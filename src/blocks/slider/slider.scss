@@ -74,13 +74,13 @@
   &__controls-container {
     width: 100%;
     max-width: 967px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
     top: 380px;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
   }
 
   &__controls-button {
@@ -132,6 +132,18 @@
     &__title-container {
       width: 100%;
       max-width: 766px;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .slider {
+    &__controls-container {
+      display: flex;
+    }
+
+    &__dots-container {
+      display: none;
     }
   }
 }
