@@ -1,11 +1,15 @@
 import './style.scss';
 import { tns } from '../node_modules/tiny-slider/src/tiny-slider';
 
-const controlsContainer = document.querySelector('.slider__controls-container');
-const controlsPrevButton = document.querySelector('.slider__controls-button_prev');
-const controlsNextButton = document.querySelector('.slider__controls-button_next');
-const dotsContainer = document.querySelector('.slider__dots-container');
-const sliderPicNumber = document.querySelector('.slider__pic-number');
+const sliderContainer = document.querySelector('.slider');
+const controlsContainer = sliderContainer.querySelector('.slider__controls-container');
+const controlsPrevButton = sliderContainer.querySelector('.slider__controls-button_prev');
+const controlsNextButton = sliderContainer.querySelector('.slider__controls-button_next');
+const dotsContainer = sliderContainer.querySelector('.slider__dots-container');
+const sliderPicNumber = sliderContainer.querySelector('.slider__pic-number');
+let viewportWidth = document.documentElement.clientWidth;
+
+console.log(`vp - ${viewportWidth}`);
 
 const slider = tns({
   container: '.my-slider',
@@ -17,6 +21,16 @@ const slider = tns({
   nextButton: controlsNextButton,
   navPosition: 'bottom',
   navContainer: dotsContainer,
+  responsive: {
+    320: {
+      fixedWidth: viewportWidth * 0.95,
+      gutter: viewportWidth * 0.05,
+    },
+    820: {
+      fixedWidth: false,
+      gutter: false,
+    },
+  },
 });
 
 sliderPicNumber.textContent = `${slider.getInfo().index}/`;
@@ -44,6 +58,20 @@ const showPrevSlideIndex = () => {
   }
 };
 
+const showCurrentSlideIndex = (e) => {
+  console.log('clicked');
+  console.log(`e.target id - ${e.target.id}`);
+  sliderPicNumber.textContent = `${e.target.id}/`;
+};
+
 controlsPrevButton.addEventListener('click', showPrevSlideIndex);
 
 controlsNextButton.addEventListener('click', showNextSlideIndex);
+
+Array.from(sliderContainer.querySelectorAll('.slider__dot')).forEach((elem) => {
+  elem.addEventListener('click', showCurrentSlideIndex);
+});
+
+window.addEventListener('resize', () => {
+  viewportWidth = document.documentElement.clientWidth;
+});

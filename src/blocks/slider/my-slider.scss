@@ -24,30 +24,33 @@
 
   &__description {
     &-container {
-      margin: 30px 0 73px;
+      margin: 47px 0 29px;
       width: 100%;
       max-width: 766px;
-      height: 58px;
+      height: 80px;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
+    }
+
+    &-item {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &_left {
+        border-right: 1px solid colors.$border-gray;
+      }
     }
 
     &-wrapper {
       // width: 50%;
+      margin: 0 24px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-
-      &_left {
-        padding: 0 48px 0 35px;
-        border-right: 1px solid colors.$border-gray;
-      }
-
-      &_right {
-        padding: 0 0 0 99px;
-      }
     }
 
     &-title {
@@ -56,7 +59,7 @@
       font-family: fonts.$base-font;
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
+      font-size: 13px;
       line-height: 150%;
       color: colors.$black;
     }
@@ -67,14 +70,15 @@
       font-family: fonts.$base-font;
       font-style: normal;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 22px;
       line-height: 150%;
       color: colors.$black;
     }
   }
 
   &__button {
-    width: 346px;
+    width: 90%;
+    max-width: 346px;
     height: 60px;
     align-self: center;
     margin: 0;
@@ -85,6 +89,51 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 340px) {
+  .my-slider {
+    &__description {
+      &-value {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .my-slider {
+    &__description {
+      &-container {
+        margin: 30px 0 73px;
+        width: 100%;
+        max-width: 766px;
+        height: 58px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      &-wrapper {
+        margin: 0 35px;
+      }
+
+      &-title {
+        font-size: 18px;
+      }
+
+      &-value {
+        font-size: 24px;
+      }
+
+      &__button {
+        width: 346px;
+        height: 60px;
+        align-self: center;
+        margin: 0;
+      }
     }
   }
 }
