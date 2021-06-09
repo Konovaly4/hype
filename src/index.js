@@ -1,77 +1,95 @@
 import './style.scss';
 import { tns } from '../node_modules/tiny-slider/src/tiny-slider';
 
-const sliderContainer = document.querySelector('.slider');
-const controlsContainer = sliderContainer.querySelector('.slider__controls-container');
-const controlsPrevButton = sliderContainer.querySelector('.slider__controls-button_prev');
-const controlsNextButton = sliderContainer.querySelector('.slider__controls-button_next');
-const dotsContainer = sliderContainer.querySelector('.slider__dots-container');
-const sliderPicNumber = sliderContainer.querySelector('.slider__pic-number');
-let viewportWidth = document.documentElement.clientWidth;
+// const sliderContainer = document.querySelector('.slider');
 
-console.log(`vp - ${viewportWidth}`);
+const sliderInit = (elem) => {
+  const controlsContainer = elem.querySelector('.slider__controls-container');
+  const controlsPrevButton = elem.querySelector('.slider__controls-button_prev');
+  const controlsNextButton = elem.querySelector('.slider__controls-button_next');
+  const dotsContainer = elem.querySelector('.slider__dots-container');
+  const sliderPicNumber = elem.querySelector('.slider__pic-number');
+  const sliderPicQuantity = elem.querySelector('.slider__pic-quantity');
 
-const slider = tns({
-  container: '.my-slider',
-  items: 1,
-  slideBy: 'page',
-  center: true,
-  controlsContainer,
-  prevButton: controlsPrevButton,
-  nextButton: controlsNextButton,
-  navPosition: 'bottom',
-  navContainer: dotsContainer,
-  responsive: {
-    320: {
-      fixedWidth: viewportWidth * 0.95,
-      gutter: viewportWidth * 0.05,
+  console.log(`num - ${sliderPicNumber}`);
+  console.log(`qty - ${sliderPicQuantity}`);
+
+  let viewportWidth = document.documentElement.clientWidth;
+
+  const slider = tns({
+    container: '.my-slider',
+    items: 1,
+    slideBy: 'page',
+    center: true,
+    controlsContainer,
+    prevButton: controlsPrevButton,
+    nextButton: controlsNextButton,
+    navPosition: 'bottom',
+    navContainer: dotsContainer,
+    responsive: {
+      320: {
+        fixedWidth: viewportWidth * 0.95,
+        gutter: viewportWidth * 0.05,
+      },
+      820: {
+        fixedWidth: false,
+        gutter: false,
+      },
     },
-    820: {
-      fixedWidth: false,
-      gutter: false,
-    },
-  },
-});
+  });
 
-sliderPicNumber.textContent = `${slider.getInfo().index}/`;
-console.log(`pic - ${sliderPicNumber.textContent}`);
+  sliderPicNumber.textContent = `${slider.getInfo().index}/`;
+  sliderPicQuantity.textContent = `${slider.getInfo().pages}`;
 
-// tns-slide-active
+  // tns-slide-active
 
-const showNextSlideIndex = () => {
-  const sliderItems = slider.getInfo().slideCount;
-  const activeSlide = slider.getInfo().index;
-  if (activeSlide === sliderItems) {
-    sliderPicNumber.textContent = `${1}/`;
-  } else {
-    sliderPicNumber.textContent = `${activeSlide + 1}/`;
-  }
+  const showNextSlideIndex = () => {
+    const sliderItems = slider.getInfo().slideCount;
+    const activeSlide = slider.getInfo().index;
+    if (activeSlide === sliderItems) {
+      sliderPicNumber.textContent = `${1}/`;
+    } else {
+      sliderPicNumber.textContent = `${activeSlide + 1}/`;
+    }
+  };
+
+  const showPrevSlideIndex = () => {
+    const sliderItems = slider.getInfo().slideCount;
+    const activeSlide = slider.getInfo().index;
+    if (activeSlide === 1) {
+      sliderPicNumber.textContent = `${sliderItems}/`;
+    } else {
+      sliderPicNumber.textContent = `${activeSlide - 1}/`;
+    }
+  };
+
+  const showCurrentSlideIndex = (e) => {
+    sliderPicNumber.textContent = `${e.target.id}/`;
+  };
+
+  controlsPrevButton.addEventListener('click', showPrevSlideIndex);
+
+  controlsNextButton.addEventListener('click', showNextSlideIndex);
+
+  Array.from(elem.querySelectorAll('.slider__dot')).forEach((item) => {
+    item.addEventListener('click', showCurrentSlideIndex);
+  });
+
+  window.addEventListener('resize', () => {
+    viewportWidth = document.documentElement.clientWidth;
+  });
 };
 
-const showPrevSlideIndex = () => {
-  const sliderItems = slider.getInfo().slideCount;
-  const activeSlide = slider.getInfo().index;
-  if (activeSlide === 1) {
-    sliderPicNumber.textContent = `${sliderItems}/`;
-  } else {
-    sliderPicNumber.textContent = `${activeSlide - 1}/`;
-  }
-};
+// const sliders = Array.from(document.querySelectorAll('.slider'));
 
-const showCurrentSlideIndex = (e) => {
-  console.log('clicked');
-  console.log(`e.target id - ${e.target.id}`);
-  sliderPicNumber.textContent = `${e.target.id}/`;
-};
+// const slidersInit = (arr) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     sliderInit(arr[i]);
+//   }
+// };
 
-controlsPrevButton.addEventListener('click', showPrevSlideIndex);
+// slidersInit(sliders);
 
-controlsNextButton.addEventListener('click', showNextSlideIndex);
-
-Array.from(sliderContainer.querySelectorAll('.slider__dot')).forEach((elem) => {
-  elem.addEventListener('click', showCurrentSlideIndex);
-});
-
-window.addEventListener('resize', () => {
-  viewportWidth = document.documentElement.clientWidth;
+Array.from(document.querySelectorAll('.slider')).forEach((elem) => {
+  sliderInit(elem);
 });
