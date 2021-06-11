@@ -1,7 +1,11 @@
 import './style.scss';
 import SliderInit from './scripts/sliderInit';
-import { sliderOneElements, sliderTwoElements } from './scripts/constants/sliderElements';
-import { tns } from '../node_modules/tiny-slider/src/tiny-slider';
+import {
+  sliderOneElements,
+  sliderTwoElements,
+  sliderThreeElements,
+  sliderFourElements,
+} from './scripts/constants/sliderElements';
 
 // console.log(sliderOneElements);
 
@@ -18,7 +22,7 @@ const sliderOne = new SliderInit(
 
 const sliderTwo = new SliderInit(
   sliderTwoElements.sliderContainer,
-  sliderOneElements.sliderList,
+  sliderTwoElements.sliderList,
   sliderTwoElements.controlsContainer,
   sliderTwoElements.prevButton,
   sliderTwoElements.nextButton,
@@ -27,21 +31,28 @@ const sliderTwo = new SliderInit(
   sliderTwoElements.sliderPicQty,
 );
 
+const sliderThree = new SliderInit(
+  sliderThreeElements.sliderContainer,
+  sliderThreeElements.sliderList,
+  sliderThreeElements.controlsContainer,
+  sliderThreeElements.prevButton,
+  sliderThreeElements.nextButton,
+  sliderThreeElements.dotsContainer,
+  sliderThreeElements.sliderPicNumber,
+  sliderThreeElements.sliderPicQty,
+);
+const sliderFour = new SliderInit(
+  sliderFourElements.sliderContainer,
+  sliderFourElements.sliderList,
+  sliderFourElements.controlsContainer,
+  sliderFourElements.prevButton,
+  sliderFourElements.nextButton,
+  sliderFourElements.dotsContainer,
+  sliderFourElements.sliderPicNumber,
+  sliderFourElements.sliderPicQty,
+);
+
 sliderOne.setListeners();
 sliderTwo.setListeners();
-
-// // forEach function
-// const forEach = function (array, callback, scope) {
-//   for (let i = 0; i < array.length; i++) {
-//     callback.call(i, array[i]); // passes back stuff we need
-//   }
-// };
-
-// // tiny-slider initialisation
-// const sliders = document.querySelectorAll('.my-slider');
-// console.log(sliders);
-// forEach(sliders, (index, value) => {
-//   const slider = tns({
-//     container: value,
-//   });
-// });
+sliderThree.setListeners();
+sliderFour.setListeners();
