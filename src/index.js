@@ -1,95 +1,47 @@
 import './style.scss';
+import SliderInit from './scripts/sliderInit';
+import { sliderOneElements, sliderTwoElements } from './scripts/constants/sliderElements';
 import { tns } from '../node_modules/tiny-slider/src/tiny-slider';
 
-// const sliderContainer = document.querySelector('.slider');
+// console.log(sliderOneElements);
 
-const sliderInit = (elem) => {
-  const controlsContainer = elem.querySelector('.slider__controls-container');
-  const controlsPrevButton = elem.querySelector('.slider__controls-button_prev');
-  const controlsNextButton = elem.querySelector('.slider__controls-button_next');
-  const dotsContainer = elem.querySelector('.slider__dots-container');
-  const sliderPicNumber = elem.querySelector('.slider__pic-number');
-  const sliderPicQuantity = elem.querySelector('.slider__pic-quantity');
+const sliderOne = new SliderInit(
+  sliderOneElements.sliderContainer,
+  sliderOneElements.sliderList,
+  sliderOneElements.controlsContainer,
+  sliderOneElements.prevButton,
+  sliderOneElements.nextButton,
+  sliderOneElements.dotsContainer,
+  sliderOneElements.sliderPicNumber,
+  sliderOneElements.sliderPicQty,
+);
 
-  console.log(`num - ${sliderPicNumber}`);
-  console.log(`qty - ${sliderPicQuantity}`);
+const sliderTwo = new SliderInit(
+  sliderTwoElements.sliderContainer,
+  sliderOneElements.sliderList,
+  sliderTwoElements.controlsContainer,
+  sliderTwoElements.prevButton,
+  sliderTwoElements.nextButton,
+  sliderTwoElements.dotsContainer,
+  sliderTwoElements.sliderPicNumber,
+  sliderTwoElements.sliderPicQty,
+);
 
-  let viewportWidth = document.documentElement.clientWidth;
+sliderOne.setListeners();
+sliderTwo.setListeners();
 
-  const slider = tns({
-    container: '.my-slider',
-    items: 1,
-    slideBy: 'page',
-    center: true,
-    controlsContainer,
-    prevButton: controlsPrevButton,
-    nextButton: controlsNextButton,
-    navPosition: 'bottom',
-    navContainer: dotsContainer,
-    responsive: {
-      320: {
-        fixedWidth: viewportWidth * 0.95,
-        gutter: viewportWidth * 0.05,
-      },
-      820: {
-        fixedWidth: false,
-        gutter: false,
-      },
-    },
-  });
-
-  sliderPicNumber.textContent = `${slider.getInfo().index}/`;
-  sliderPicQuantity.textContent = `${slider.getInfo().pages}`;
-
-  // tns-slide-active
-
-  const showNextSlideIndex = () => {
-    const sliderItems = slider.getInfo().slideCount;
-    const activeSlide = slider.getInfo().index;
-    if (activeSlide === sliderItems) {
-      sliderPicNumber.textContent = `${1}/`;
-    } else {
-      sliderPicNumber.textContent = `${activeSlide + 1}/`;
-    }
-  };
-
-  const showPrevSlideIndex = () => {
-    const sliderItems = slider.getInfo().slideCount;
-    const activeSlide = slider.getInfo().index;
-    if (activeSlide === 1) {
-      sliderPicNumber.textContent = `${sliderItems}/`;
-    } else {
-      sliderPicNumber.textContent = `${activeSlide - 1}/`;
-    }
-  };
-
-  const showCurrentSlideIndex = (e) => {
-    sliderPicNumber.textContent = `${e.target.id}/`;
-  };
-
-  controlsPrevButton.addEventListener('click', showPrevSlideIndex);
-
-  controlsNextButton.addEventListener('click', showNextSlideIndex);
-
-  Array.from(elem.querySelectorAll('.slider__dot')).forEach((item) => {
-    item.addEventListener('click', showCurrentSlideIndex);
-  });
-
-  window.addEventListener('resize', () => {
-    viewportWidth = document.documentElement.clientWidth;
-  });
-};
-
-// const sliders = Array.from(document.querySelectorAll('.slider'));
-
-// const slidersInit = (arr) => {
-//   for (let i = 0; i < arr.length; i++) {
-//     sliderInit(arr[i]);
+// // forEach function
+// const forEach = function (array, callback, scope) {
+//   for (let i = 0; i < array.length; i++) {
+//     callback.call(i, array[i]); // passes back stuff we need
 //   }
 // };
 
-// slidersInit(sliders);
-
-Array.from(document.querySelectorAll('.slider')).forEach((elem) => {
-  sliderInit(elem);
-});
+// // tiny-slider initialisation
+// const sliders = document.querySelectorAll('.my-slider');
+// console.log(sliders);
+// forEach(sliders, (index, value) => {
+//   const slider = tns({
+//     container: value,
+//   });
+// });
